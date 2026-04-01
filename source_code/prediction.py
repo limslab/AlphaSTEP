@@ -76,7 +76,7 @@ print(f'Using device: {device}')
 model = PeptideClassifier(input_size, hidden_size, num_layers, num_classes).to(device)
 
 # 加载最佳模型
-model.load_state_dict(torch.load('best_model.pth', weights_only=True))
+model.load_state_dict(torch.load('advanced best_model.pth', weights_only=True))
 model.eval()
 
 # 读取包含肽段的文件（假设是一个文本文件，每行一个肽段）
@@ -130,8 +130,8 @@ def predict_peptides(file_path):
     })
 
     # 保存结果到Excel文件
-    df_results.to_excel('预测.xlsx', index=False)
+    df_results.to_excel('predictions.xlsx', index=False)
     print("预测结果已保存到 predictions1.xlsx")
 
 # 调用预测函数，替换为你的包含肽段的文件路径
-predict_peptides('peptides.txt')
+predict_peptides('unqiue peptide.txt')

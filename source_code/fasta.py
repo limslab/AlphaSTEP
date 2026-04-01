@@ -1305,7 +1305,7 @@ def _check_if_multi_mods_on_aa(var_mods):
 spec_lib = SpecLibFasta(
     charged_frag_types=['b_z1', 'b_z2', 'y_z1', 'y_z2'],
     protease='trypsin',
-    max_missed_cleavages=1,
+    max_missed_cleavages=0,
     peptide_length_min=7,
     peptide_length_max=35,
     precursor_charge_min=2,
@@ -1328,7 +1328,7 @@ spec_lib = SpecLibFasta(
 )
 
 # 输入的 FASTA 文件名称
-fasta_file = 'uniprotkb_human_disease_protein_AND_rev_2025_12_16_6013proteins.fasta'
+fasta_file = 'uniprotkb_human_disease_protein.fasta'
 
 # 导入并处理 FASTA 文件
 spec_lib.import_and_process_fasta([fasta_file])

@@ -2,7 +2,7 @@ import h5py
 import pandas as pd
 
 # 替换为你的HDF文件路径
-hdf_file_path = 'output_spectral_library2.hdf'
+hdf_file_path = 'output_spectral_library1.hdf'
 
 # 用于存储所有数据集数据的字典
 data_dict = {}

@@ -166,7 +166,7 @@ def cleanup_temp_files(max_iterations):
 # 主程序
 if __name__ == "__main__":
     # 输入文件路径
-    excel_file_path = 'peptides.xlsx'
+    excel_file_path = 'filtered_and_deduplicated.xlsx'
     
     # 检查文件是否存在
     if not os.path.exists(excel_file_path):
@@ -180,11 +180,11 @@ if __name__ == "__main__":
     filtered_df, deleted_df, total_iterations = iterative_filter_peptide_sequences(excel_file_path)
     
     # 保存最终结果
-    output_file_path = '筛选后.xlsx'
+    output_file_path = 'unqiue peptide.xlsx'
     filtered_df.to_excel(output_file_path, index=False)
     
     # 保存所有删除记录
-    deleted_records_path = '删除记录.xlsx'
+    deleted_records_path = 'delete record.xlsx'
     if not deleted_df.empty:
         deleted_df.to_excel(deleted_records_path, index=False)
         print(f"\n所有删除记录已保存到 {deleted_records_path}")
